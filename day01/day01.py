@@ -2,25 +2,25 @@ file_name = './day1.input'
 
 with open(file_name) as f:
     content = f.readlines()
-content = [int(x.strip()) for x in content]
+DATA = [int(x.strip()) for x in content]
 
 # PART ONE      
-def part_one(content, value):
-    for x in content:
-        if (value - x) in content:
+def part_one(data, value):
+    for x in data:
+        if (value - x) in data:
             print(f"The numbers are {x} and {value - x}")
             print(f"The answer is part one {x * (value - x)}")
             return x * (value - x)
     return False
 
-part_one(content, 2020)
+part_one(DATA, 2020)
 
 # PART TWO
-def part_two(content, value):
-    for x in content:
-        second_part = part_one(content, value - x)
+def part_two(data, value):
+    for x in data:
+        second_part = part_one(data, value - x)
         if second_part:
             print(f"The answer is part two {x * second_part}")
             return x * second_part
 
-part_two(content, 2020)
+part_two(DATA, 2020)
