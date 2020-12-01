@@ -9,7 +9,7 @@ def part_one(data, value):
     for x in data:
         if (value - x) in data:
             print(f"The numbers are {x} and {value - x}")
-            print(f"The answer is part one {x * (value - x)}")
+            print(f"The answer for part one {x * (value - x)}")
             return x * (value - x)
     return False
 
@@ -20,7 +20,7 @@ def part_two(data, value):
     for x in data:
         second_part = part_one(data, value - x)
         if second_part:
-            print(f"The answer is part two {x * second_part}")
+            print(f"The answer for part two {x * second_part}")
             return x * second_part
 
 part_two(DATA, 2020)
