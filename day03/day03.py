@@ -8,7 +8,7 @@ def trees_encountered(shift_right, shift_down):
     idx = 0
     count = 0
     for line in MAP[shift_down::shift_down]:
-        idx += shift_right if (idx + shift_right) <= len(MAP[0]) - 1 else - len(MAP[0]) + shift_right
+        idx = (idx + shift_right) % len(MAP[0])
         count += 1 if line[idx] == '#' else 0
     return count
 
