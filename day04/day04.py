@@ -1,5 +1,4 @@
 import re
-from IPython import embed
 
 file_name = './day04.input'
 with open(file_name) as f:
