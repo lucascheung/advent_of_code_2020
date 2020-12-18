@@ -45,6 +45,6 @@ for i in DATA:
     elif i[0] == 'R':
         while arg:
             wx, wy = wy, -wx
-            arg -= 90     
+            arg -= 90
 
 print(abs(d))
